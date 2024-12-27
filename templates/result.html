@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Skill Assessment - Results{% endblock %}
+{% block body %}
+<div class="container mt-5 p-4" style="background-color: rgba(105, 105, 105, 0.5); border-radius: 12px;">
+<h2>Assessment Results</h2>
+<p>Category: {{ skill_category | title }}</p>
+<p>Level: {{ skill_level | title }}</p>
+<p>Your Score: <strong>{{ score }}%</strong></p>
+
+<h3>Answer Review:</h3>
+<ul>
+    {% for question, data in user_answers.items %}
+    <li>
+        <strong>{{ question }}</strong>:
+        <br> Your Answer: <em>{{ data.user_answer }}</em>
+        <br> Correct Answer: <em>{{ data.correct_answer }}</em>
+        <br> {% if data.is_correct %} ✅ Correct {% else %} ❌ Incorrect {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}

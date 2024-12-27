@@ -1,0 +1,22 @@
+.container1{
+    margin-top: 5px;
+    margin-left: 2px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    width: 50%;
+    height: 500px;
+    float: left;
+    text-align: center;
+}
+h2{
+    margin-top: 2px;
+    padding: 5px;
+    color: blue;
+    background-color: rgba(241, 115, 115, 0.5);
+}
+.scon{
+    border: 2px solid black;
+    height: 80%;
+    margin: 2px;
+    /* text-align: center; */
+}

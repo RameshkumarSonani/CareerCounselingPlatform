@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="container-fluid" style="margin-top: 1px; padding: 0;">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner" style="height: 80vh;">
+            <div class="carousel-item active">
+                <img src="/static/imag/1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block"
+                    style="color:rgb(255, 255, 255); background-color: rgba(39, 24, 24, 0.8); border-radius: 10px;">
+                    <h5>Grow Up With Us</h5>
+                    <p>Here you can Search Jobs,Test Your Skill Level,And Search University Abroad Which Is Suitabe For You</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/imag/32.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block"
+                    style="color:rgb(255, 255, 255); background-color: rgba(63, 39, 39,0.8); border-radius: 10px;">
+                    <h5>Make Future Bright!!</h5>
+                    <p>This PlatForm Provide You To Explore The Wold's Best Companies To Work Their..!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/static/imag/3.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="...">
+                <div class="carousel-caption d-none d-md-block"
+                    style="color:rgb(255, 255, 255); background-color: rgba(63, 39, 39,0.8); border-radius: 10px;">
+                    <h5>See Your Progress Tracking</h5>
+                    <p>Tracking Your Life's Controll With Your Scheduling And Skill Developement</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<div class="container1">
+    <h2>Search Best Jobs</h2>
+    <div class="scon">
+        We Can Help You To Search Your Best Designation, In Your Own Country As Well As Foreign!<br>
+        <a href="/fulltime_job">You Can See Here Your Full-Time Desigination</a><br>
+        <a href="/parttime_job">We Are Here To suggest Your Part Time Earning With Your Study</a><br>
+        <a href="/Internship">Search For Work Experience Through Internships In different Fields</a><br>
+    </div>
+</div>
+{% endblock body %}

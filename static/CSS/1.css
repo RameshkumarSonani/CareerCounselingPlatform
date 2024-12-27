@@ -1,0 +1,11 @@
+.custom-navbar {
+    
+    background-color: rgba(212, 215, 241, 0.5) !important; /* Transparent background */
+    position: sticky; /* Sticky position */
+    top: 0; /* Navbar will stick at the top */
+    z-index: 1020; /* Ensures it stays above other elements */
+  }
+  .nav-link{
+    color: black;
+    
+  }

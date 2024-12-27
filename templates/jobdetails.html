@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Job-Details{% endblock title %}
+{% block body %}
+
+<div class="container my-4">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">{{ job.job_title }}</h5>
+            <p class="card-text"><strong>Location:</strong> {{ job.company_location }}</p>
+            <p class="card-text"><strong>Employment Type:</strong> {{ job.employment_type }}</p>
+            <p class="card-text"><strong>Salary:</strong> {{ job.salary }} {{ job.salary_currency }}</p>
+            <p class="card-text"><strong>Work-Setting:</strong> {{ job.work_setting }}</p>
+            <p class="card-text"><strong>Company-Size:</strong> {{ job.company_size }}</p>
+
+            <!-- Dynamic "Back to Jobs" Link -->
+            {% if job.employment_type == "Full-time" %}
+            <a href="{% url 'fulltime_Jobs' %}" class="btn btn-secondary">Back to Full-Time Jobs</a>
+            {% elif job.employment_type == "Part-time" %}
+            <a href="{% url 'parttime_Job' %}" class="btn btn-secondary">Back to Part-Time Jobs</a>
+            {% elif job.employment_type == "Internship" %}
+            <a href="{% url 'Internships' %}" class="btn btn-secondary">Back to Internships</a>
+            {% else %}
+            <a href="{% url 'home' %}" class="btn btn-secondary">Back to Home</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock%}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}FullTime-Jobs{% endblock %}
+{% block body %}
+<div class="container my-4">
+    <h1 class="text-center mb-4">Full-Time Job Listings</h1>
+    <div class="row">
+        <!-- Filters Sidebar -->
+        <div class="col-md-3">
+            <div class="card shadow-sm p-3">
+                <h5>Filters</h5>
+                <form method="GET" action="{% url 'fulltime_Jobs' %}">
+                    <!-- Location Filter -->
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Job Location</label>
+                        <select id="location" name="location" class="form-select">
+                            <option value="" selected>All</option>
+                            {% for loc in locations %}
+                                <option value="{{ loc }}">{{ loc }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <!-- Salary Range Filter -->
+                    <div class="mb-3">
+                        <label for="salary_min" class="form-label">Salary Range</label>
+                        <div class="input-group">
+                            <input type="number" name="salary_min" id="salary_min" class="form-control" placeholder="Min">
+                            <input type="number" name="salary_max" id="salary_max" class="form-control" placeholder="Max">
+                        </div>
+                    </div>
+
+                    <!-- Apply Filters Button -->
+                    <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Jobs Listings -->
+        <div class="col-md-9">
+            <div class="row">
+                {% for job in jobs %}
+                <div class="col-md-4">
+                    <div class="card job-card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ job.job_title }}</h5>
+                            <p class="card-text"><strong>Location:</strong> {{ job.company_location }}</p>
+                            <p class="card-text"><strong>Employment Type:</strong> {{ job.employment_type }}</p>
+                            <p class="card-text"><strong>Salary:</strong> {{ job.salary }} {{ job.salary_currency }}</p>
+                            <a href="{% url 'jobdetails' job.id %}" class="btn btn-primary btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

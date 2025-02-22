@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock title %}
 {% block body %}
-<div class="container-fluid" style="margin-top: 1px; padding: 0;">
+<div class="container-fluid
+" style="margin-top: 1px; padding: 0;">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner" style="height: 80vh;">
-            <div class="carousel-item active">
+            <div class="carousel-item active cont1">
                 <img src="/static/imag/1.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;" alt="...">
                 <div class="carousel-caption d-none d-md-block"
                     style="color:rgb(255, 255, 255); background-color: rgba(39, 24, 24, 0.8); border-radius: 10px;">
@@ -39,13 +40,116 @@
         </button>
     </div>
 </div>
-<div class="container1">
-    <h2>Search Best Jobs</h2>
-    <div class="scon">
-        We Can Help You To Search Your Best Designation, In Your Own Country As Well As Foreign!<br>
-        <a href="/fulltime_job">You Can See Here Your Full-Time Desigination</a><br>
-        <a href="/parttime_job">We Are Here To suggest Your Part Time Earning With Your Study</a><br>
-        <a href="/Internship">Search For Work Experience Through Internships In different Fields</a><br>
+
+<!-- Features Section -->
+
+    <div class="container text-center my-5">
+        <h2 class="mb-4">What We Offer</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fa fa-search fa-3x text-primary"></i>
+                <h4>Skill Assessment</h4>
+                <p>Evaluate your skills and find suitable career paths.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-briefcase fa-3x text-success"></i>
+                <h4>Job Matching</h4>
+                <p>Discover jobs that align with your qualifications.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fa fa-plane fa-3x text-info"></i>
+                <h4>Study Abroad</h4>
+                <p>Explore opportunities in top universities globally.</p>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Testimonials Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">What Our Users Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <blockquote class="blockquote text-center">
+                    <p>"This platform helped me land my dream job!"</p>
+                    <footer class="blockquote-footer">Ali Khan</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote text-center">
+                    <p>"I found the best university abroad with their guidance."</p>
+                    <footer class="blockquote-footer">Sara Ahmed</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote text-center">
+                    <p>"Progress tracking features keep me motivated."</p>
+                    <footer class="blockquote-footer">Ahmed Raza</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+<!-- Newsletter Subscription -->
+    <div class="container text-center my-5">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates on jobs, skills, and opportunities.</p>
+        <form class="d-flex justify-content-center">
+            <input type="email" class="form-control w-50" placeholder="Enter your email" required>
+            <button class="btn btn-primary ms-2">Subscribe</button>
+        </form>
+    </div>
+    
+    <!-- Newsletter form -->
+</div>
+
+<!-- Blog Posts -->
+<div class="container my-5">
+    <h2>Latest Articles</h2>
+    <div class="container my-5">
+        <h2 class="text-center">Latest Articles</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/static/imag/10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Top Skills in 2024</h5>
+                        <p class="card-text">Learn the most in-demand skills for the upcoming year.</p>
+                        <a href="/blog/skills-2024" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/static/imag/s.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Study Abroad Guide</h5>
+                        <p class="card-text">Tips for finding scholarships and applying to top universities.</p>
+                        <a href="/blog/study-abroad" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/static/imag/5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Career Planning</h5>
+                        <p class="card-text">How to effectively plan and track your career goals.</p>
+                        <a href="/blog/career-planning" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Contact Section -->
+<div class="container my-5 text-center">
+    <div class="container my-5 text-center">
+        <h2>Contact Us</h2>
+        <p>Have questions or need help? Reach out to us!</p>
+        <a href="/contact" class="btn btn-secondary">Get in Touch</a>
     </div>
 </div>
+
 {% endblock body %}

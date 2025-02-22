@@ -17,6 +17,11 @@ urlpatterns = [
     path("internship", views.Internship, name="Internships"),
     path("job/<int:job_id>/", views.JobDetails, name="jobdetails"),
     path("progresstracking", views.ProgressTrack, name="progresstrack"),
-
+    path("contactus", views.ContactUs, name="contactus"),
+    path("aboutus", views.AboutUs, name="aboutus"),
+    path("community", views.Community, name="community"),
+    path("blogs", views.Blogs, name="blogs"),
+    path("faqs", views.Faqs, name="faqs"),
+    path("upload_resume", views.Upload_resume, name="upload_resume"),
     # path('SignupUser',views.SignupUser,"Signup"),
 ]

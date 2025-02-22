@@ -1,4 +1,6 @@
+import os
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -30,3 +32,16 @@ class Job(models.Model):
 
     def __str__(self):
         return f"{self.job_title} at {self.company_location}"
+
+# uploading the User resume 
+
+# Function to save resume with username
+def resume_upload_path(instance, filename):
+    ext = filename.split('.')[-1]
+    return f"resumes/{instance.user.username}_resume.{ext}"
+
+class Resume(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    resume = models.FileField(upload_to=resume_upload_path)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+

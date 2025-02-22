@@ -6,6 +6,9 @@ from django.contrib import messages
 from .questions import QUESTIONS 
 from django.db.models import Q
 from .models import Job
+# uploading Resume
+from .models import Resume
+
 
 def index(request):
     if request.user.is_anonymous:
@@ -13,16 +16,24 @@ def index(request):
     return render(request, "index.html")
 
 def AboutUs(request):
-    return render(request, "about.html")
+    return render(request, "aboutus.html")
+
+def Community(request):
+    return render(request, "community.html")
 
 def ContactUs(request):
-    return render(request, "contact.html")
+    return render(request, "contactus.html")
 
 def SearchJob(request):
     return render(request, "serachjob.html")
 
 def StudyAbroad(request):
     return render(request, "studyabroad.html")
+
+def Blogs(request):
+    return render(request, "blogs.html")
+def Faqs(request):
+    return render(request, "faqs.html")
 
 def LoginUser(request):
     if request.method=="POST":
@@ -198,3 +209,16 @@ def skill_assessment(request):
 
 def ProgressTrack(request):
     return render(request,"progresstracking.html")
+
+# Uloading Resume
+def Upload_resume(request):
+    if request.method == "POST" and request.FILES.get('resume'):
+        resume_file = request.FILES['resume']
+        resume_instance, created = Resume.objects.get_or_create(user=request.user)
+        resume_instance.resume = resume_file
+        resume_instance.save()
+        return HttpResponse("Your resume has been successfully uploaded!")  # Replace with actual success page
+    return render(request, "upload_resume.html")
+
+def success_page(request):
+    return render(request, 'success.html')

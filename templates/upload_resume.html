@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Upload Resume{% endblock %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="resume" required>
+    <button type="submit">Upload Resume</button>
+</form>
+{% endblock %}

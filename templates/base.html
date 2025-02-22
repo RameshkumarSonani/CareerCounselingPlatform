@@ -13,12 +13,13 @@
   <title>{% block title %}{% endblock title %}||Career-Counseling||</title>
   <link rel="stylesheet" href="{% static 'CSS/jobs.css' %}">
   <link rel="stylesheet" href="{% static 'CSS/index.css'%}">
+  <link rel="stylesheet" href="{% static 'CSS/base.css'%}">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
-    style="padding: 10px; background-color: rgba(93, 96, 119, 0.5);">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark"
+    style="padding: 10px; background-color: rgba(204, 206, 218, 0.2);">
+    <div class="container-fluid" style="background-color: rgba(19, 19, 20, 0.8); border-radius: 10px;">
       <a class="navbar-brand" href="/">
         <img src="/static/imag/0.png " alt=" " width="50" height="45" class="rounded-circle">
       </a>
@@ -31,31 +32,73 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/skill-assessment">Skill-Assistement</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Learning
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/skill-assessment">Skill Assessment</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/courcert">Courses & Certifications</a></li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Find-Jobs
+              Jobs
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/fulltime_job">Full-Time</a></li>
+              <li><a class="dropdown-item" href="/upload_resume">Put Resume</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/parttime_job">Part-Time</a></li>
+              <li><a class="dropdown-item" href="/fulltime_job">Available Jobs</a></li>
+              {% comment %} <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/internship">Internships</a></li> {% endcomment %}
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Guidance
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/studyabroad">Study Abroad</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/internship">Internships</a></li>
+              <li><a class="dropdown-item" href="/parttime_job">Scholarships</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/internship">Sucess Stories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/community">Community</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/faqs">FAQs</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/studyabroad">Study-Abroad</a>
+            <a class="nav-link" href="/sucess">Sucess</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/progresstracking">Progress-Tracking</a>
+            <a class="nav-link" href="/contactus">Contactus</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -65,7 +108,17 @@
               User
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-              <li><a class="dropdown-item" href="/signup">Signup</a></li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/progresstracking">ProgressTracking</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/profile">Profile</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>

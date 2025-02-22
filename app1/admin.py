@@ -1,5 +1,6 @@
 from django.contrib import admin
 from app1.models import Job
+from .models import Resume
 
 # Register your models here.
 class JobAdmin(admin.ModelAdmin):
@@ -13,3 +14,7 @@ class JobAdmin(admin.ModelAdmin):
     search_fields = ('job_title', 'company_location', 'employee_residence')
     
 admin.site.register(Job)
+
+@admin.register(Resume)
+class ResumeAdmin(admin.ModelAdmin):
+    list_display = ['user', 'uploaded_at']

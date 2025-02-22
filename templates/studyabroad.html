@@ -1,5 +1,34 @@
 {% extends "base.html" %}
 {% block title %}Study-Abroad{% endblock title %}
 {% block body %}
-this is the studyabroad
+<div class="container d-flex flex-column align-items-center" style="border: 2px solid black; height: 100vh; overflow-y: auto; position: relative;">
+    <!-- Heading Center at Top -->
+    <h3 style="position: absolute; top: 20px; text-align: center; width: 100%;">Let's Try Out The Universities & Colleges Abroad!!!</h3>
+
+    <!-- Universities Wrapper -->
+    <div class="d-flex flex-row align-items-center justify-content-center" style="margin-top: 90px;">
+        <!-- Middle Asian Universities -->
+        <div class="Universities text-center"style="margin-left: 30px;" style="margin-bottom: 20px;">
+            <a href="Middle Asian Universities">
+                <img src="/static/imag/Uni1.jpg" alt="Reload Image" style="display: block; margin: auto;">
+                 Asian Universities
+            </a>
+        </div>
+
+        <!-- European Universities -->
+        <div class="Universities text-center"style="margin-left: 30px;">
+            <a href="Europian Universities">
+                <img src="/static/imag/Uni1.jpg" alt="Reload Image" style="display: block; margin: auto;">
+                European Universities
+            </a>
+        </div>
+        <div class="Universities text-center"style="margin-left: 30px;">
+            <a href="#">
+                <img src="/static/imag/Scholarships.jpg" alt="Reload Image" style="display: block; margin: auto;">
+                Scholarships
+            </a>
+        </div>
+    </div>
+</div>
+
 {% endblock body %}
